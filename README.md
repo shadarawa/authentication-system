@@ -55,16 +55,19 @@ This repo intentionally excludes any private data.
 
 ```text
 .
-├─ run_system.py
-├─ main.py
-├─ pc_client.py
-├─ verify_fusion.py
-├─ face_model_insightface.py
-├─ voice_model.py
+├─ run_system.py              # Main runner (full system)
+├─ main.py                    # FastAPI server (if used by your flow)
+├─ pc_client.py               # PC-side logic (STT + UI prompts)
+├─ verify_fusion.py           # Fusion logic (face + voice)
+├─ face_model_insightface.py  # Face embeddings using InsightFace
+├─ voice_model.py             # Speaker embeddings using SpeechBrain
 ├─ db/
-├─ dataset/
+│  ├─ teachers.json           # Template (placeholder)
+│  └─ pending.json            # Template (placeholder)
+├─ dataset/                   # Template only (no private media)
 ├─ logs/
-└─ assets/prompts/
+│  └─ attempts.jsonl          # Empty placeholder
+└─ assets/prompts/            # Audio/text prompts (AR/EN)
 ```
 
 ---
