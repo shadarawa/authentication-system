@@ -108,44 +108,46 @@ pip install vosk
 ```
 
 ---
+Vosk Model (Not Included)
+Why the Vosk model folder is not in this repo
+A folder like vosk-model-small-en-us-0.15 is an external pre-trained model downloaded from a third-party source. To avoid licensing/ownership issues (and reduce repo size), the model is not committed here.
 
-## Vosk Model (Not Included)
-
-Download Vosk model manually and place it inside project.
-
-Example:
-
-```text
+How to use Vosk with this project
+Download any compatible Vosk model (English or other language).
+Place the model folder inside the project directory, for example:
 Authentication-System/
 └─ vosk-model-small-en-us-0.15/
-```
+If your model has a different folder name
+No problem — just pass its name/path via --vosk_model:
 
----
+python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.22 --name_seconds 6 --cooldown 10 --pc_ui_lang en
+Alternatively, you can change the default in the code where the argument is defined (search for --vosk_model in run_system.py).
 
-## Running the System
+Running the Full System
+From the project root:
 
-```bash
 python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.15 --name_seconds 6 --cooldown 10 --pc_ui_lang en
-```
+Example variations
+Run without STT (if supported by your setup):
+python run_system.py --vosk_model vosk-model-small-en-us-0.15 --cooldown 10 --pc_ui_lang en
+Switch UI language (if you have prompts for Arabic):
+python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.15 --name_seconds 6 --cooldown 10 --pc_ui_lang ar
 
----
+What you need to provide (because this repo is privacy-safe)
+To actually enroll/verify identities you must provide your own data:
 
-## What you need to provide
+Add your own images/audio into the expected dataset/ structure.
+Fill your local teacher/user list (CSV/JSON templates) with your own IDs.
+Generate embeddings/databases according to the scripts you use in your workflow.
 
-- your own dataset  
-- your own identities  
-- generate embeddings locally  
+Troubleshooting
+The system can’t find the Vosk model Make sure the folder exists and the path matches the --vosk_model value.
+Empty dataset / missing identities This repo ships without private media by design. Add your own data locally.
+Repeated triggers / too many attempts Increase --cooldown to reduce back-to-back attempts.
 
----
+Third-Party Models & Licensing
+This repository contains project code and placeholder templates only. Third-party models (e.g., Vosk) are governed by their original licenses and must be obtained separately.
 
-## Troubleshooting
+Contact
+If you build on this project, feel free to open an issue or submit a pull request.
 
-- Model not found → check path  
-- Empty dataset → add your data  
-- Too many triggers → increase cooldown  
-
----
-
-## Contact
-
-Open an issue or pull request if needed.
