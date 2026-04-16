@@ -1,0 +1,37 @@
+{
+  "db_path": "db/teachers.json",
+  "pending_path": "db/pending.json",
+  "pending_samples_dir": "pending_samples",
+  "teachers_csv": "Teachers.csv",
+  "logs_path": "logs/attempts.jsonl",
+  "thresholds": {
+    "face": 0.46,
+    "voice": 0.4,
+    "alpha": 0.6,
+    "require_both": true,
+    "high_confidence_margin": 0.03
+  },
+  "security": {
+    "max_audio_seconds": 8.0,
+    "max_image_bytes": 4000000,
+    "max_audio_bytes": 8000000
+  },
+  "incremental": {
+    "enabled": true,
+    "min_fused_for_update": 0.9,
+    "min_face_for_update": 0.9,
+    "min_voice_for_update": 0.9
+  },
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "use_tls": true,
+    "smtp_user": "",
+    "smtp_password": "",
+    "from": "",
+    "to": [],
+    "subject_prefix": "[NAO AUTH]",
+    "attach_audio": true
+  }
+}
