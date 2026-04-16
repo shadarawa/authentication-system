@@ -1,1 +1,61 @@
-
+{
+  "version": 1,
+  "teachers": [
+    {
+      "id": "T0001",
+      "name": "",
+      "face_embeddings": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "voice_embeddings": [
+        [],
+        [],
+        []
+      ],
+      "meta": {
+        "num_images_used": 13,
+        "num_audios_used": 3,
+        "last_updated": ""
+      }
+    },
+    {
+      "id": "T0002",
+      "name": "",
+      "face_embeddings": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "voice_embeddings": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "meta": {
+        "num_images_used": 8,
+        "num_audios_used": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "pending": [
+    {
+      "pending_id": "",
+      "requested_teacher_id": null,
+      "name": "",
+      "robot_captured": false,
+      "source_ip": "",
+      "created_at": "",
+      "img_path": "",
+      "aud_path": "",
+      "name_path": null,
+      "face_embedding": [
+
+      ],
+      "voice_embedding": [
+
+      ],
+      "status": "PENDING"
+    }
+  ]
+}
