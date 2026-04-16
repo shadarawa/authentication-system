@@ -108,46 +108,76 @@ pip install vosk
 ```
 
 ---
-Vosk Model (Not Included)
-Why the Vosk model folder is not in this repo
-A folder like vosk-model-small-en-us-0.15 is an external pre-trained model downloaded from a third-party source. To avoid licensing/ownership issues (and reduce repo size), the model is not committed here.
+## Vosk Model (Not Included)
 
-How to use Vosk with this project
-Download any compatible Vosk model (English or other language).
+### Why the Vosk model folder is not in this repo
+
+A folder like `vosk-model-small-en-us-0.15` is an external pre-trained model downloaded from a third-party source. To avoid licensing and ownership issues, and to reduce repo size, the model is not committed here.
+
+### How to use Vosk with this project
+
+Download any compatible Vosk model, whether English or another language.
+
 Place the model folder inside the project directory, for example:
+
+```text
 Authentication-System/
 └─ vosk-model-small-en-us-0.15/
-If your model has a different folder name
-No problem — just pass its name/path via --vosk_model:
+```
 
+### If your model has a different folder name
+
+No problem. Just pass its name or path using `--vosk_model`:
+
+```bash
 python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.22 --name_seconds 6 --cooldown 10 --pc_ui_lang en
-Alternatively, you can change the default in the code where the argument is defined (search for --vosk_model in run_system.py).
+```
 
-Running the Full System
+Alternatively, you can change the default in the code where the argument is defined by searching for `--vosk_model` in `run_system.py`.
+
+## Running the Full System
+
 From the project root:
 
+```bash
 python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.15 --name_seconds 6 --cooldown 10 --pc_ui_lang en
-Example variations
-Run without STT (if supported by your setup):
+```
+
+### Example variations
+
+Run without STT, if supported by your setup:
+
+```bash
 python run_system.py --vosk_model vosk-model-small-en-us-0.15 --cooldown 10 --pc_ui_lang en
-Switch UI language (if you have prompts for Arabic):
+```
+
+Switch UI language, if you have prompts for Arabic:
+
+```bash
 python run_system.py --stt_name --vosk_model vosk-model-small-en-us-0.15 --name_seconds 6 --cooldown 10 --pc_ui_lang ar
+```
 
-What you need to provide (because this repo is privacy-safe)
-To actually enroll/verify identities you must provide your own data:
+## What you need to provide (because this repo is privacy-safe)
 
-Add your own images/audio into the expected dataset/ structure.
-Fill your local teacher/user list (CSV/JSON templates) with your own IDs.
-Generate embeddings/databases according to the scripts you use in your workflow.
+To actually enroll or verify identities, you must provide your own data:
 
-Troubleshooting
-The system can’t find the Vosk model Make sure the folder exists and the path matches the --vosk_model value.
-Empty dataset / missing identities This repo ships without private media by design. Add your own data locally.
-Repeated triggers / too many attempts Increase --cooldown to reduce back-to-back attempts.
+- Add your own images and audio into the expected `dataset/` structure.
+- Fill your local teacher or user list, such as CSV or JSON templates, with your own IDs.
+- Generate embeddings and databases according to the scripts used in your workflow.
 
-Third-Party Models & Licensing
-This repository contains project code and placeholder templates only. Third-party models (e.g., Vosk) are governed by their original licenses and must be obtained separately.
+## Troubleshooting
 
-Contact
+- **The system can’t find the Vosk model:** Make sure the folder exists and the path matches the `--vosk_model` value.
+- **Empty dataset or missing identities:** This repo ships without private media by design. Add your own data locally.
+- **Repeated triggers or too many attempts:** Increase `--cooldown` to reduce back-to-back attempts.
+
+## Third-Party Models & Licensing
+
+This repository contains project code and placeholder templates only. Third-party models, such as Vosk, are governed by their original licenses and must be obtained separately.
+
+## Contact
+
 If you build on this project, feel free to open an issue or submit a pull request.
+
+
 
