@@ -1,0 +1,48 @@
+{
+  "ts": "2025-12-28T22:07:50",
+  "dataset": "D:\\dataset",
+  "alpha": 0.6,
+  "params": {
+    "enroll_imgs": 1,
+    "enroll_auds": 1,
+    "min_imgs": 2,
+    "min_auds_any": 1,
+    "min_auds_for_voice_eval": 2
+  },
+  "counts": {
+    "teachers_total": 12,
+    "teachers_face_eval": 12,
+    "teachers_voice_eval": 9,
+    "pairs_face": {
+      "pos": 57,
+      "neg": 57
+    },
+    "pairs_voice": {
+      "pos": 19,
+      "neg": 19
+    },
+    "pairs_fusion": {
+      "pos": 17,
+      "neg": 17
+    }
+  },
+  "results": {
+    "face": {
+      "eer": 0.0,
+      "thr_eer": 0.46417874097824097
+    },
+    "voice": {
+      "eer": 0.0,
+      "thr_eer": 0.4024071991443634
+    },
+    "fusion": {
+      "eer": 0.0,
+      "thr_eer": 0.47343650460243225
+    }
+  },
+  "suggested_thresholds": {
+    "face": 0.46417874097824097,
+    "voice": 0.4024071991443634,
+    "fusion": 0.47343650460243225
+  }
+}
