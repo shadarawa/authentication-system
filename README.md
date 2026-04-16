@@ -1,4 +1,4 @@
-# authentication-system
+## authentication-system
 # Authentication System (Face + Voice + Optional STT) — Privacy-Safe Repo
 
 A practical authentication workflow that can combine:
