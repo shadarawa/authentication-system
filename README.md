@@ -9,6 +9,9 @@ Optional offline speech-to-text (STT) for capturing a name using Vosk
 
 This repository is published in a privacy-safe way: the project structure is complete, but any sensitive datasets/logs/identities were removed or replaced with placeholders.
 
+<img width="1192" height="625" alt="image" src="https://github.com/user-attachments/assets/9bbc747d-50db-46d2-9ac7-92571910824e" />
+
+
 ---
 
 ## Demo Run (How we run the full system)
